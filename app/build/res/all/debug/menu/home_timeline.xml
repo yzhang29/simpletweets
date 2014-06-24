@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.codepath.apps.simpletwitter.HomeTimelineActivity" >
+
+    <item
+        android:id="@+id/miCompose"
+        android:icon="@drawable/ic_action_name"
+        android:showAsAction="ifRoom"
+        android:title="Compose"
+        android:onClick="onComposeAction">
+    </item>
+</menu>
+<!-- From: file:/Users/yzhang29/AndroidStudioProjects/SimpleTwitter/app/src/main/res/menu/home_timeline.xml -->
