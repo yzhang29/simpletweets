@@ -65,7 +65,7 @@ public class ComposeActivity extends Activity {
         client.postTweet(new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(JSONObject json) {
-                Log.d("debug", "Success");
+                Log.d("json", json.toString());
                 Intent data = new Intent();
                 setResult(RESULT_OK, data);
                 finish();

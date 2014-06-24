@@ -71,6 +71,7 @@ public class HomeTimelineActivity extends Activity {
         client.getHomeTimeLine(new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(JSONArray json) {
+                Log.d("json", json.toString());
                 aTweets.addAll(Tweet.fromJsonArray(json));
             }
 
