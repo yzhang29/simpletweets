@@ -14,3 +14,6 @@ Which required and optional stories have you completed?
 * [x]User can click a “Compose” icon in the Action Bar on the top right
 * [x]User can then enter a new tweet and post this to twitter
 * [x]User is taken back to home timeline with new tweet visible in timeline
+* 
+![Video Walkthrough](simpletwitter.gif)
+
