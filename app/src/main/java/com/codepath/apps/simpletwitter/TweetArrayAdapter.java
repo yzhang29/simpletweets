@@ -1,6 +1,7 @@
 package com.codepath.apps.simpletwitter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
+import java.util.PriorityQueue;
 
 /**
  * Created by yzhang29 on 6/23/14.
@@ -26,8 +28,8 @@ public class TweetArrayAdapter extends ArrayAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
-        Tweet tweet = (Tweet) getItem(position);
+    public View getView(int position, View convertView, final ViewGroup parent){
+        final Tweet tweet = (Tweet) getItem(position);
         View v;
         if(convertView ==null){
             LayoutInflater inflater = LayoutInflater.from(getContext());
@@ -46,6 +48,14 @@ public class TweetArrayAdapter extends ArrayAdapter {
         tvUserName.setText(tweet.getUser().getScreenName());
         tvBody.setText(tweet.getBody());
         tvCreated.setText(getRelativeTimeAgo(tweet.getCreatedAt()));
+        ivProfileImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(parent.getContext(), ProfileActivity.class);
+                i.putExtra("userScreenName", tweet.getUser().getScreenName());
+                getContext().startActivity(i);
+            }
+        });
         return v;
     }
 

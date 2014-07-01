@@ -5,9 +5,16 @@
 
     <item
         android:id="@+id/miCompose"
-        android:icon="@drawable/ic_action_name"
+        android:icon="@drawable/ic_new_tweets"
         android:showAsAction="ifRoom"
         android:title="Compose"
         android:onClick="onComposeAction">
+    </item>
+    <item
+        android:id="@+id/miProfile"
+        android:icon="@drawable/ic_profile"
+        android:showAsAction="ifRoom"
+        android:title="Compose"
+        android:onClick="onProfileView">
     </item>
 </menu>

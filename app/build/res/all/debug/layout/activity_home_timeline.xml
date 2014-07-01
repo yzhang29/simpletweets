@@ -4,12 +4,16 @@
     android:layout_height="match_parent"
     tools:context="com.codepath.apps.simpletwitter.HomeTimelineActivity">
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lvTweets"
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/flContainer"></FrameLayout>
 </RelativeLayout>
 <!-- From: file:/Users/yzhang29/AndroidStudioProjects/SimpleTwitter/app/src/main/res/layout/activity_home_timeline.xml -->
